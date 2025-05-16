@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head.ejs') %>
+  <body>
+    <%- include('partials/navbar.ejs') %>
+
+    <div class="main-container">
+      <div class="header-container">
+        <h1>My Blog Page</h1>
+        <p>Wellcome to my blog.</p>
+        <p>You can check my posts by clicking "My Posts" section</p>
+      </div>
+
+      <div class="content-container">
+        <div class="left-sidebar">
+          <ul>
+            <% posts.forEach(post => { %>
+            <li class="left-sidebar-items">
+              <a href="/post/<%=post.id %>"><%=post.title%></a>
+              <a class="edit" href="/post/edit/<%=post.id%>"
+                ><img class="svgs" src="/images/edit.png"
+              /></a>
+              <a class="delete" href="/post/delete/<%=post.id%>"
+                ><img class="svgs" src="/images/delete.png"
+              /></a>
+            </li>
+
+            <% }) %>
+          </ul>
+        </div>
+
+        <div class="form-container">
+          <form action="/submit-post" method="post" class="form">
+            <div class="title-container">
+              <label for="title" class="title-label">Title</label>
+              <input type="text" name="title" id="title" class="title-input" />
+            </div>
+            <div class="script-container">
+              <label for="script" class="script-label">Script</label>
+              <textarea
+                class="script-textarea"
+                name="script"
+                id="script"
+                rows="10"
+              ></textarea>
+            </div>
+            <div class="btn-container">
+              <input type="submit" value="Send Post" class="btn-input" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="push-footer"></div>
+
+    <footer class="footer-container">
+      <p class="">
+        Copyright © <%= new Date().getFullYear() %> - Blog Web Application
+      </p>
+    </footer>
+  </body>
+</html>

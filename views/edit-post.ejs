@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head.ejs') %>
+  <body>
+    <%- include('partials/navbar.ejs') %>
+
+    <div class="main-container">
+      <div class="form-container">
+        <form action="/update-post" method="post" class="form">
+          <input type="hidden" name="id" value="<%=post.id  %>" />
+          <div class="title-container">
+            <label for="title" class="title-label">Title</label>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              class="title-input"
+              value="<%= post.title %>"
+            />
+          </div>
+          <div class="script-container">
+            <label for="script" class="script-label">Script</label>
+            <textarea
+              class="update-script-textarea"
+              name="script"
+              id="script"
+              rows="10"
+            >
+<%=post.body %></textarea
+            >
+          </div>
+          <div class="btn-container">
+            <input type="submit" value="Update" class="btn-input" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="push-footer"></div>
+    <footer class="footer-container">
+      <p class="">
+        Copyright © <%= new Date().getFullYear() %> - Blog Web Application
+      </p>
+    </footer>
+  </body>
+</html>

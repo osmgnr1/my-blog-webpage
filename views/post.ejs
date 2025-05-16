@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head.ejs') %>
+  <body>
+    <%- include('partials/navbar.ejs') %>
+
+    <div class="main-container">
+      <article class="post-container">
+        <div class="post-title-container">
+          <h1 class="post-title"><%=post.title %></h1>
+        </div>
+        <div class="post-body-container">
+          <p class="post-body"><%=post.body %></p>
+        </div>
+        <div class="post-author-container">
+          <p class="post-author"><%=post.author %></p>
+        </div>
+        <div class="post-date-container">
+          <% if (post.updateDate) { %>
+          <p class="post-date"><%=post.updateDate %></p>
+
+          <% } else { %>
+          <p class="post-date"><%=post.date %></p>
+
+          <% } %>
+        </div>
+      </article>
+    </div>
+    <div class="push-footer"></div>
+    <footer class="footer-container">
+      <p class="">
+        Copyright © <%= new Date().getFullYear() %> - Blog Web Application
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+html,
+body {
+  height: 100vh;
+  margin: 0px;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+nav ul {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-container {
+  background-color: rgb(185, 185, 143);
+  padding: 10px 0px;
+  margin-bottom: 10px;
+}
+
+.navbar-container li {
+  list-style: none;
+  padding: 0px 5px;
+}
+
+.main-container {
+  display: block;
+  width: 75%;
+  justify-self: center;
+}
+
+.header-container {
+  padding: 20px 0px;
+  background-color: rgb(190, 190, 164);
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.content-container {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.left-sidebar {
+  background-color: burlywood;
+  width: 25%;
+  padding: 0px 10px;
+}
+
+.left-sidebar ul {
+  padding: 10px 10px;
+}
+
+.left-sidebar li {
+  list-style: none;
+  padding: 5px 0px;
+}
+
+.form-container {
+  background-color: rgb(128, 164, 185);
+  width: 75%;
+}
+
+.form {
+  padding: 10px 20px;
+  display: block;
+  justify-items: center;
+}
+
+.title-container,
+.script-container,
+.btn-container {
+  margin: 0px 0px 15px 0px;
+  width: 100%;
+  justify-items: left;
+}
+
+.title-label,
+.script-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.title-input,
+.script-textarea,
+.update-script-textarea {
+  padding: 10px 10px;
+  margin: 0px;
+  border: 3px solid white;
+  border-radius: 5px;
+  width: 400px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+  outline: none;
+  font-family: inherit;
+  font-size: medium;
+  /* -webkit-transition: 0.3s;
+  transition: 0.3s; */
+}
+
+.title-input:focus,
+.script-textarea:focus,
+.update-script-textarea:focus {
+  border: 3px solid rgb(82, 123, 238);
+}
+
+.btn-input {
+  padding: 10px 15px;
+  border: none;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgb(82, 123, 238);
+  font-family: inherit;
+}
+
+.btn-input:hover {
+  background-color: rgb(232, 234, 240);
+  color: rgb(82, 123, 238);
+  font-weight: bold;
+  font-family: inherit;
+}
+
+.script-textarea,
+.update-script-textarea {
+  resize: vertical;
+}
+
+.update-script-textarea {
+  height: auto;
+}
+
+.footer-container {
+  padding: 5px;
+  background-color: burlywood;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.push-footer {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.footer-container p {
+  text-align: center;
+}
+
+.main-container article {
+  background-color: lightskyblue;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.main-container article p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.post-title-container,
+.post-body-container,
+.post-title-container,
+.post-author-container {
+  margin-bottom: 20px;
+}
+
+.svgs {
+  width: 16px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.edit,
+.delete {
+  margin: 0px 5px;
+  padding: 0px;
+}
