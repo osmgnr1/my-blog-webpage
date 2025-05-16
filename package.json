@@ -1,13 +1,9 @@
 {
-  "homepage": "https://osmgnr1.github.io/my-blog-webpage",
   "name": "blogwebapp",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "npm run build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -18,8 +14,5 @@
     "body-parser": "^2.2.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0"
-  },
-  "devDependencies": {
-    "gh-pages": "^6.3.0"
   }
 }
